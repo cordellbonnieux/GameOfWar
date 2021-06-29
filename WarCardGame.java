@@ -68,12 +68,39 @@ public class WarCardGame {
         if (x > 13 || x < 1)
             return readCard(input);
         
+            // return the player's play
         return x;
     }
 
     public static int getCard() {
 
-        return 0;
+        // generate a random card
+        double z = 1 + (Math.random() * 13);
+
+        int y = (int)z;
+
+        // assign a name to the named cards
+        String name = "";
+
+        if (y == 1)
+            name = "n Ace";
+        else if (y == 11)
+            name = " Jack";
+        else if (y == 12)
+            name = " Queen";
+        else if (y == 13)
+            name = " King";
+        
+        // print the computer play
+        System.out.print("The computer played a");
+        
+        if (y == 1 || y > 10)
+            System.out.println(name + "(" + y + ")");
+        else 
+            System.out.println(" " + y);
+
+        // return the computer's play     
+        return y;
     }
 
     public static Boolean isTie(int user, int comp) {
