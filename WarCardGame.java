@@ -17,6 +17,9 @@ public class WarCardGame {
             // get computer's card
             int comp = getCard();
 
+            // break if it's a tie
+            if (isTie(user, comp)) continue;
+
             // get the winner
             Boolean playerWin = whoWins(user, comp);
 
@@ -28,10 +31,38 @@ public class WarCardGame {
         }
 
         // print results
-        printResults();
+        matchResults(playerScore, compScore);
 
         // end program
         System.exit(0);
+
+    }
+
+    public static int readCard(Scanner x) {
+
+        return 0;
+    }
+
+    public static int getCard() {
+
+        return 0;
+    }
+
+    public static Boolean isTie(int user, int comp) {
+
+        return false;
+    }
+
+    public static Boolean whoWins(int user, int comp) {
+
+        return false;
+    }
+
+    public static void displayWinner(Boolean playerWin) {
+
+    }
+
+    public static void matchResults(int playerScore, int compScore) {
 
     }
 }
