@@ -105,19 +105,43 @@ public class WarCardGame {
 
     public static Boolean isTie(int user, int comp) {
 
+        // return true if it's a tie
+        if (user == comp)
+            return true;
+
         return false;
     }
 
     public static Boolean whoWins(int user, int comp) {
-
+        
+        // check if player is winner
+        if (user > comp)
+            return true;
+        
         return false;
     }
 
     public static void displayWinner(Boolean playerWin) {
 
+        // prompt who wins the round
+        if (playerWin) 
+            System.out.println("You win the round!");
+        else    
+            System.out.println("Computer wins the round!");
+        
     }
 
     public static void matchResults(int playerScore, int compScore) {
+
+        // show the total score
+        System.out.println("|- Match Results:");
+        System.out.println("Your wins: " + playerScore + ", Computer wins: " + compScore);
+
+        // who's the winner?
+        String winner = (playerScore > compScore) ? "You" : "The Computer";
+
+        // prompt ending 
+        System.out.println(winner + " wins!");
 
     }
 }
